@@ -1,0 +1,28 @@
+  function loadCard(data){
+            var key=Object.keys(data[0]);
+        // document.write(key)
+
+
+            document.write("<div class='row m-5'>")
+            for (let a = 0; a < data.length; a++) {
+            document.write(`
+            <div class="col-md-4">
+                    <div class="card m-3">
+                            <div class="card-header">Header</div>
+                            <div class="card-body">
+            `);
+                        for (let b = 0; b <key.length; b++) {
+                            document.write(`  <p>Car ${key[b]}: ${data[a][key[b]]}</p>`);
+                        }
+            
+            document.write(`
+                        </div> 
+                        <div class="card-footer">Footer</div>
+                    </div>
+                </div>
+            `);
+            
+            }
+            document.write("</div>")
+        }
+        loadCard(data)
