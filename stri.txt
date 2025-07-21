@@ -1,0 +1,601 @@
+let str = "Hello, JavaScript World!";
+
+// 1. length
+console.log("Length:", str.length);
+
+// 2. charAt()
+console.log("charAt(0):", str.charAt(0));
+
+// 3. charCodeAt()
+console.log("charCodeAt(0):", str.charCodeAt(0));
+
+// 4. at()
+console.log("at(-1):", str.at(-1));
+
+// 5. concat()
+console.log("concat():", str.concat(" Enjoy Coding!"));
+
+// 6. includes()
+console.log("includes('Java'):", str.includes("Java"));
+
+// 7. indexOf()
+console.log("indexOf('World'):", str.indexOf("World"));
+
+// 8. lastIndexOf()
+console.log("lastIndexOf('o'):", str.lastIndexOf("o"));
+
+// 9. slice()
+console.log("slice(7, 17):", str.slice(7, 17));
+
+// 10. substring()
+console.log("substring(7, 17):", str.substring(7, 17));
+
+// 11. substr() - deprecated but still works
+console.log("substr(7, 10):", str.substr(7, 10));
+
+// 12. toLowerCase()
+console.log("toLowerCase():", str.toLowerCase());
+
+// 13. toUpperCase()
+console.log("toUpperCase():", str.toUpperCase());
+
+// 14. trim()
+let messy = "   Trim this string!   ";
+console.log("trim():", `"${messy.trim()}"`);
+
+// 15. trimStart() / trimLeft()
+console.log("trimStart():", `"${messy.trimStart()}"`);
+
+// 16. trimEnd() / trimRight()
+console.log("trimEnd():", `"${messy.trimEnd()}"`);
+
+// 17. startsWith()
+console.log("startsWith('Hello'):", str.startsWith("Hello"));
+
+// 18. endsWith()
+console.log("endsWith('World!'):", str.endsWith("World!"));
+
+// 19. repeat()
+console.log("repeat(2):", str.repeat(2));
+
+// 20. replace()
+console.log("replace('World', 'Universe'):", str.replace("World", "Universe"));
+
+// 21. replaceAll()
+let text = "apple apple apple";
+console.log("replaceAll('apple', 'orange'):", text.replaceAll("apple", "orange"));
+
+// 22. split()
+console.log("split(' '):", str.split(" "));
+
+// 23. match()
+console.log("match(/[A-Z]/g):", str.match(/[A-Z]/g));
+
+// 24. matchAll()
+let iterator = str.matchAll(/o/g);
+console.log("matchAll(/o/g):", [...iterator]);
+
+// 25. search()
+console.log("search('JavaScript'):", str.search("JavaScript"));
+
+// 26. padStart()
+let padStr = "42";
+console.log("padStart(5, '0'):", padStr.padStart(5, '0'));
+
+// 27. padEnd()
+console.log("padEnd(5, '*'):", padStr.padEnd(5, '*'));
+
+// 28. toString()
+console.log("toString():", str.toString());
+
+// 29. valueOf()
+console.log("valueOf():", str.valueOf());
+
+// 30. normalize()
+let accented = "\u00F1"; // ñ
+console.log("normalize():", accented.normalize());
+
+// 31. localeCompare()
+console.log("localeCompare('Hello'):", str.localeCompare("Hello"));
+
+// 32. codePointAt()
+console.log("codePointAt(0):", str.codePointAt(0));
+
+// 33. fromCharCode()
+console.log("fromCharCode(72, 101, 108, 108, 111):", String.fromCharCode(72,101,108,108,111));
+
+// 34. fromCodePoint()
+console.log("fromCodePoint(128512):", String.fromCodePoint(128512)); // 😀
+
+
+///================================
+
+let arr = [1, 2, 3, 4, 5];
+
+// 1. length
+console.log("Length:", arr.length);
+
+// 2. push()
+arr.push(6);
+console.log("push(6):", arr);
+
+// 3. pop()
+arr.pop();
+console.log("pop():", arr);
+
+// 4. unshift()
+arr.unshift(0);
+console.log("unshift(0):", arr);
+
+// 5. shift()
+arr.shift();
+console.log("shift():", arr);
+
+// 6. concat()
+let arr2 = [6, 7];
+let combined = arr.concat(arr2);
+console.log("concat([6, 7]):", combined);
+
+// 7. join()
+console.log("join('-'):", arr.join('-'));
+
+// 8. slice()
+console.log("slice(1, 3):", arr.slice(1, 3));
+
+// 9. splice()
+arr.splice(2, 1, 99); // Replace item at index 2
+console.log("splice(2, 1, 99):", arr);
+
+// 10. indexOf()
+console.log("indexOf(4):", arr.indexOf(4));
+
+// 11. lastIndexOf()
+arr.push(2);
+console.log("lastIndexOf(2):", arr.lastIndexOf(2));
+
+// 12. includes()
+console.log("includes(3):", arr.includes(3));
+
+// 13. reverse()
+console.log("reverse():", arr.reverse());
+
+// 14. sort()
+let alpha = ['b', 'c', 'a'];
+console.log("sort():", alpha.sort());
+
+// 15. map()
+let squared = arr.map(x => x * x);
+console.log("map(x => x * x):", squared);
+
+// 16. filter()
+let even = arr.filter(x => x % 2 === 0);
+console.log("filter(even):", even);
+
+// 17. reduce()
+let sum = arr.reduce((acc, val) => acc + val, 0);
+console.log("reduce(sum):", sum);
+
+// 18. reduceRight()
+let sumRight = arr.reduceRight((acc, val) => acc + val, 0);
+console.log("reduceRight(sum):", sumRight);
+
+// 19. forEach()
+arr.forEach((val, idx) => console.log(`forEach index ${idx}: ${val}`));
+
+// 20. find()
+console.log("find(x > 3):", arr.find(x => x > 3));
+
+// 21. findIndex()
+console.log("findIndex(x > 3):", arr.findIndex(x => x > 3));
+
+// 22. some()
+console.log("some(x > 3):", arr.some(x => x > 3));
+
+// 23. every()
+console.log("every(x > 0):", arr.every(x => x > 0));
+
+// 24. flat()
+let nested = [1, [2, [3, 4]]];
+console.log("flat(2):", nested.flat(2));
+
+// 25. flatMap()
+let nums = [1, 2, 3];
+console.log("flatMap():", nums.flatMap(x => [x, x * 2]));
+
+// 26. fill()
+let filled = new Array(5).fill(0);
+console.log("fill(0):", filled);
+
+// 27. copyWithin()
+let copyArr = [1, 2, 3, 4, 5];
+console.log("copyWithin(0, 3):", copyArr.copyWithin(0, 3));
+
+// 28. toString()
+console.log("toString():", arr.toString());
+
+// 29. toLocaleString()
+console.log("toLocaleString():", arr.toLocaleString());
+
+// 30. Array.isArray()
+console.log("Array.isArray(arr):", Array.isArray(arr));
+
+// 31. from()
+console.log("Array.from('123'):", Array.from('123'));
+
+// 32. of()
+console.log("Array.of(1, 2, 3):", Array.of(1, 2, 3));
+
+// 33. entries()
+for (let [index, value] of arr.entries()) {
+  console.log(`entries: ${index} => ${value}`);
+}
+
+// 34. keys()
+console.log("keys():", [...arr.keys()]);
+
+// 35. values()
+console.log("values():", [...arr.values()]);
+
+
+
+console.log("=== Creation & Inspection ===");
+let arr = [1, 2, 3, 4, 5];
+console.log("Array.isArray(arr):", Array.isArray(arr));
+console.log("arr.length:", arr.length);
+
+
+console.log("\n=== Adding/Removing Elements ===");
+arr.push(6);                      // Add to end
+arr.unshift(0);                  // Add to start
+arr.pop();                       // Remove from end
+arr.shift();                     // Remove from start
+console.log("Modified array:", arr);
+arr.splice(2, 1, 99);            // Replace element at index 2
+console.log("After splice:", arr);
+console.log("Slice (1-3):", arr.slice(1, 3));  // Extract a section
+arr = [1, 2, 3, 4, 5];           // Reset array
+
+
+console.log("\n=== Searching & Finding ===");
+console.log("Includes 3?", arr.includes(3));
+console.log("Index of 3:", arr.indexOf(3));
+console.log("Last index of 3:", arr.lastIndexOf(3));
+console.log("Find > 3:", arr.find(x => x > 3));
+console.log("FindIndex > 3:", arr.findIndex(x => x > 3));
+
+
+console.log("\n=== Iteration & Transformation ===");
+arr.forEach((x, i) => console.log(`forEach - index ${i}:`, x));
+let mapped = arr.map(x => x * 2);
+console.log("Mapped:", mapped);
+let filtered = arr.filter(x => x % 2 === 0);
+console.log("Filtered (even):", filtered);
+let reduced = arr.reduce((acc, x) => acc + x, 0);
+console.log("Reduced (sum):", reduced);
+let flatMapped = arr.flatMap(x => [x, x * 2]);
+console.log("FlatMapped:", flatMapped);
+
+
+console.log("\n=== Sorting & Reversing ===");
+let unsorted = [4, 1, 3, 2];
+unsorted.sort((a, b) => a - b); // Ascending
+console.log("Sorted:", unsorted);
+unsorted.reverse();
+console.log("Reversed:", unsorted);
+
+
+console.log("\n=== Combining & Flattening ===");
+let a = [1, 2], b = [3, 4];
+let combined = a.concat(b);
+console.log("Concatenated:", combined);
+let nested = [1, [2, [3, 4]]];
+console.log("Flattened:", nested.flat(2));
+
+
+console.log("\n=== Filling & Copying ===");
+let fillArr = [0, 0, 0];
+fillArr.fill(5);                        // Fill all with 5
+console.log("Filled:", fillArr);
+let copyArr = [1, 2, 3, 4];
+copyArr.copyWithin(1, 2);              // Copy elements from index 2 to 1
+console.log("copyWithin:", copyArr);
+
+
+console.log("\n=== Testing & Checking ===");
+console.log("Every > 0?", arr.every(x => x > 0));
+console.log("Some > 3?", arr.some(x => x > 3));
+
+
+console.log("\n=== Creating Arrays ===");
+let fromStr = Array.from("abc");
+console.log("Array.from:", fromStr);
+let ofExample = Array.of(10, 20);
+console.log("Array.of:", ofExample);
+
+
+console.log("\n=== Converting to String ===");
+console.log("arr.toString():", arr.toString());
+console.log("arr.join('-'):", arr.join('-'));
+
+
+///================================
+console.log("=== Creating Object ===");
+let obj = {
+  name: "Alice",
+  age: 25,
+  greet() {
+    console.log(`Hello, I’m ${this.name}`);
+  }
+};
+obj.greet();
+
+
+console.log("\n=== Object.keys(), Object.values(), Object.entries() ===");
+console.log("Keys:", Object.keys(obj));     // ['name', 'age', 'greet']
+console.log("Values:", Object.values(obj)); // ['Alice', 25, [Function]]
+console.log("Entries:", Object.entries(obj));// [['name', 'Alice'], ['age', 25], ['greet', f]]
+
+
+console.log("\n=== Object.assign() ===");
+let obj2 = { country: "India" };
+let merged = Object.assign({}, obj, obj2); // Merge into new object
+console.log("Merged:", merged);
+
+
+console.log("\n=== Object.freeze() ===");
+let frozen = Object.freeze({ x: 10 });
+frozen.x = 100;
+console.log("Frozen object:", frozen); // Cannot modify
+
+
+console.log("\n=== Object.seal() ===");
+let sealed = Object.seal({ y: 20 });
+sealed.y = 30;     // Allowed
+delete sealed.y;   // Not allowed
+console.log("Sealed object:", sealed);
+
+
+console.log("\n=== Object.create() ===");
+let proto = { type: "animal" };
+let dog = Object.create(proto);
+dog.name = "Bruno";
+console.log("Dog object:", dog);
+console.log("Prototype:", dog.type);
+
+
+console.log("\n=== Object.hasOwn() ===");
+console.log("dog hasOwn 'name':", Object.hasOwn(dog, "name"));     // true
+console.log("dog hasOwn 'type':", Object.hasOwn(dog, "type"));     // false
+
+
+console.log("\n=== Object.defineProperty() ===");
+let person = {};
+Object.defineProperty(person, "id", {
+  value: 123,
+  writable: false,
+  enumerable: true
+});
+console.log("Person:", person);
+person.id = 999;
+console.log("Modified id (should not change):", person.id);
+
+
+console.log("\n=== Object.getOwnPropertyDescriptor() ===");
+let desc = Object.getOwnPropertyDescriptor(person, "id");
+console.log("Descriptor of 'id':", desc);
+
+
+console.log("\n=== Object.getPrototypeOf() & Object.setPrototypeOf() ===");
+let base = { origin: "Earth" };
+let alien = { name: "Zorg" };
+Object.setPrototypeOf(alien, base);
+console.log("alien prototype:", Object.getPrototypeOf(alien));
+
+
+console.log("\n=== Object.entries() to loop ===");
+for (let [key, value] of Object.entries(obj)) {
+  console.log(`${key}: ${value}`);
+}
+
+
+console.log("\n=== Object.fromEntries() ===");
+let arrEntries = [["x", 1], ["y", 2]];
+let objFromArr = Object.fromEntries(arrEntries);
+console.log("From entries:", objFromArr);
+
+
+console.log("\n=== Object.is() ===");
+console.log("Object.is(5, 5):", Object.is(5, 5));                   // true
+console.log("Object.is(NaN, NaN):", Object.is(NaN, NaN));           // true
+console.log("Object.is(+0, -0):", Object.is(+0, -0));               // false
+
+
+console.log("\n=== Object.preventExtensions() ===");
+let extensible = { a: 1 };
+Object.preventExtensions(extensible);
+extensible.b = 2; // Won’t be added
+console.log("After preventExtensions:", extensible);
+
+////==============================
+console.log("=== Number Object & Literal ===");
+let num1 = 42;
+let num2 = new Number(42); // Object
+console.log("num1:", num1, "| typeof:", typeof num1);
+console.log("num2:", num2, "| typeof:", typeof num2);
+
+
+console.log("\n=== Conversion Methods ===");
+let x = 123.456;
+console.log("toString:", x.toString());
+console.log("toExponential(2):", x.toExponential(2));
+console.log("toFixed(1):", x.toFixed(1));
+console.log("toPrecision(4):", x.toPrecision(4));
+console.log("valueOf():", num2.valueOf());
+
+
+console.log("\n=== Number.isFinite() ===");
+console.log("isFinite(10):", Number.isFinite(10));             // true
+console.log("isFinite(Infinity):", Number.isFinite(Infinity)); // false
+
+
+console.log("\n=== Number.isInteger() ===");
+console.log("isInteger(5):", Number.isInteger(5));             // true
+console.log("isInteger(5.5):", Number.isInteger(5.5));         // false
+
+
+console.log("\n=== Number.isNaN() ===");
+console.log("isNaN(NaN):", Number.isNaN(NaN));                 // true
+console.log("isNaN('hello'):", Number.isNaN("hello"));         // false
+
+
+console.log("\n=== Number.parseInt() & parseFloat() ===");
+console.log("parseInt('100'):", Number.parseInt("100"));       // 100
+console.log("parseFloat('12.34'):", Number.parseFloat("12.34"));// 12.34
+
+
+console.log("\n=== Number Constants ===");
+console.log("MAX_VALUE:", Number.MAX_VALUE);
+console.log("MIN_VALUE:", Number.MIN_VALUE);
+console.log("POSITIVE_INFINITY:", Number.POSITIVE_INFINITY);
+console.log("NEGATIVE_INFINITY:", Number.NEGATIVE_INFINITY);
+console.log("NaN:", Number.NaN);
+console.log("EPSILON:", Number.EPSILON);
+console.log("MAX_SAFE_INTEGER:", Number.MAX_SAFE_INTEGER);
+console.log("MIN_SAFE_INTEGER:", Number.MIN_SAFE_INTEGER);
+
+
+console.log("\n=== Global isNaN() vs Number.isNaN() ===");
+console.log("isNaN('abc'):", isNaN("abc"));                   // true
+console.log("Number.isNaN('abc'):", Number.isNaN("abc"));     // false
+
+
+console.log("\n=== Global parseInt() vs Number.parseInt() ===");
+console.log("parseInt('15px'):", parseInt("15px"));           // 15
+console.log("Number.parseInt('15px'):", Number.parseInt("15px")); // 15
+
+
+console.log("\n=== Arithmetic Operations ===");
+let a = 10;
+let b = 3;
+console.log("Addition:", a + b);
+console.log("Subtraction:", a - b);
+console.log("Multiplication:", a * b);
+console.log("Division:", a / b);
+console.log("Modulus:", a % b);
+console.log("Exponentiation:", a ** b);
+////////////////===========================
+console.log("=== Math Constants ===");
+console.log("Math.PI:", Math.PI);
+console.log("Math.E:", Math.E);
+console.log("Math.LN2:", Math.LN2);
+console.log("Math.LN10:", Math.LN10);
+console.log("Math.LOG2E:", Math.LOG2E);
+console.log("Math.LOG10E:", Math.LOG10E);
+console.log("Math.SQRT2:", Math.SQRT2);
+console.log("Math.SQRT1_2:", Math.SQRT1_2);
+
+
+console.log("\n=== Rounding Methods ===");
+console.log("Math.round(4.5):", Math.round(4.5));  // 5
+console.log("Math.floor(4.9):", Math.floor(4.9));  // 4
+console.log("Math.ceil(4.1):", Math.ceil(4.1));    // 5
+console.log("Math.trunc(4.7):", Math.trunc(4.7));  // 4
+
+
+console.log("\n=== Min/Max & Absolute ===");
+console.log("Math.max(1, 2, 3):", Math.max(1, 2, 3));
+console.log("Math.min(1, 2, 3):", Math.min(1, 2, 3));
+console.log("Math.abs(-10):", Math.abs(-10));
+
+
+console.log("\n=== Power and Root ===");
+console.log("Math.pow(2, 3):", Math.pow(2, 3));       // 8
+console.log("Math.sqrt(16):", Math.sqrt(16));         // 4
+console.log("Math.cbrt(27):", Math.cbrt(27));         // 3
+console.log("Math.hypot(3, 4):", Math.hypot(3, 4));   // 5
+
+
+console.log("\n=== Trigonometric Functions ===");
+console.log("Math.sin(Math.PI / 2):", Math.sin(Math.PI / 2)); // 1
+console.log("Math.cos(0):", Math.cos(0));                    // 1
+console.log("Math.tan(Math.PI / 4):", Math.tan(Math.PI / 4));// 1
+console.log("Math.asin(1):", Math.asin(1));                  // PI/2
+console.log("Math.acos(1):", Math.acos(1));                  // 0
+console.log("Math.atan(1):", Math.atan(1));                  // PI/4
+console.log("Math.atan2(3, 4):", Math.atan2(3, 4));          // angle
+
+
+console.log("\n=== Logarithmic Functions ===");
+console.log("Math.log(10):", Math.log(10));        // natural log
+console.log("Math.log10(100):", Math.log10(100));  // base 10
+console.log("Math.log2(8):", Math.log2(8));        // base 2
+console.log("Math.exp(1):", Math.exp(1));          // e^1
+
+
+console.log("\n=== Random and Sign ===");
+console.log("Math.random():", Math.random());          // 0-1
+console.log("Math.sign(-5):", Math.sign(-5));          // -1
+console.log("Math.sign(0):", Math.sign(0));            // 0
+console.log("Math.sign(10):", Math.sign(10));          // 1
+//==========================
+
+
+
+console.log("=== Creating Dates ===");
+let now = new Date();
+let dateFromString = new Date("2024-12-25");
+let dateFromNumbers = new Date(2025, 6, 21, 14, 30); // Month is 0-based
+let dateFromTimestamp = new Date(1680000000000);
+
+console.log("Current Date:", now);
+console.log("From String:", dateFromString);
+console.log("From Numbers:", dateFromNumbers);
+console.log("From Timestamp:", dateFromTimestamp);
+
+
+console.log("\n=== Getter Methods ===");
+console.log("getFullYear():", now.getFullYear());
+console.log("getMonth():", now.getMonth());       // 0-11
+console.log("getDate():", now.getDate());         // 1-31
+console.log("getDay():", now.getDay());           // 0 (Sun) - 6 (Sat)
+console.log("getHours():", now.getHours());
+console.log("getMinutes():", now.getMinutes());
+console.log("getSeconds():", now.getSeconds());
+console.log("getMilliseconds():", now.getMilliseconds());
+console.log("getTime():", now.getTime());         // Timestamp
+console.log("getTimezoneOffset():", now.getTimezoneOffset()); // Minutes diff from UTC
+
+
+console.log("\n=== Setter Methods ===");
+let setDate = new Date();
+setDate.setFullYear(2022);
+setDate.setMonth(11);         // December
+setDate.setDate(31);
+setDate.setHours(23);
+setDate.setMinutes(59);
+setDate.setSeconds(45);
+setDate.setMilliseconds(999);
+console.log("Modified Date:", setDate);
+
+
+console.log("\n=== toString Methods ===");
+console.log("toString():", now.toString());
+console.log("toDateString():", now.toDateString());
+console.log("toTimeString():", now.toTimeString());
+console.log("toLocaleString():", now.toLocaleString());
+console.log("toLocaleDateString():", now.toLocaleDateString());
+console.log("toLocaleTimeString():", now.toLocaleTimeString());
+console.log("toUTCString():", now.toUTCString());
+console.log("toISOString():", now.toISOString());
+console.log("toJSON():", now.toJSON());
+
+
+console.log("\n=== Static Methods ===");
+console.log("Date.now():", Date.now());
+console.log("Date.parse('2025-07-21'):", Date.parse("2025-07-21"));
+console.log("Date.UTC(2025, 6, 21):", Date.UTC(2025, 6, 21)); // Timestamp in UTC
+
+
+
+
+
