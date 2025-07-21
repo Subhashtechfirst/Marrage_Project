@@ -1,0 +1,105 @@
+✅ 1. Creation Operators
+Used to create observables from various sources.
+
+Examples:
+
+of() – Emits the arguments you provide.
+
+from() – Converts promises, arrays, etc., into observables.
+
+interval() – Emits incrementing numbers at a specified interval.
+
+timer() – Emits after a delay or periodically.
+
+range() – Emits a range of numbers.
+
+defer() – Lazily creates an observable.
+
+empty(), never(), throwError() – Emit specific patterns.
+
+✅ 2. Transformation Operators
+Modify or transform the items emitted by an observable.
+
+Examples:
+
+map() – Transforms values.
+
+pluck() – Extracts a property from an object.
+
+scan() – Accumulates values over time (like reduce).
+
+buffer(), bufferTime() – Collect values into arrays over time.
+
+concatMap(), mergeMap(), switchMap(), exhaustMap() – Flattening operators for inner observables.
+
+✅ 3. Filtering Operators
+Control which values are emitted.
+
+Examples:
+
+filter() – Emits values that meet a condition.
+
+take(), takeWhile(), takeUntil() – Limit emissions.
+
+skip(), skipWhile(), skipUntil() – Skip emissions.
+
+distinct(), distinctUntilChanged() – Avoid duplicates.
+
+debounceTime() – Wait before emitting (used for input).
+
+✅ 4. Combination Operators
+Combine multiple observables into one.
+
+Examples:
+
+merge() – Merge multiple observables.
+
+concat() – Concatenate observables sequentially.
+
+combineLatest() – Combine latest values from each observable.
+
+forkJoin() – Wait for all observables to complete.
+
+withLatestFrom() – Combine source with latest value from another.
+
+zip() – Combine values in pairs.
+
+✅ 5. Utility Operators
+Assist in debugging or observing the behavior.
+
+Examples:
+
+tap() – Perform side effects (e.g., logging).
+
+delay() – Delay emissions.
+
+timeout() – Error if time passes without emission.
+
+finalize() – Run code when observable completes.
+
+repeat(), retry() – Resubscribe on completion/error.
+
+✅ 6. Multicasting Operators
+Share a single subscription among multiple subscribers.
+
+Examples:
+
+share() – Share a single observable.
+
+publish() – Turns cold observable hot (with connect()).
+
+shareReplay() – Replay previous values to new subscribers.
+
+✅ 7. Error Handling Operators
+Handle errors gracefully.
+
+Examples:
+
+catchError() – Recover from errors.
+
+retry() – Retry on error.
+
+retryWhen() – Retry with a delay or custom logic.
+
+throwError() – Create an observable that emits an error.
+
