@@ -1,0 +1,85 @@
+#1. of – Creates an Observable from arguments
+typescript
+Copy
+Edit
+import { of } from 'rxjs';
+
+const observable$ = of(1, 2, 3, 4);
+observable$.subscribe(value => console.log(value));
+Output:
+
+Copy
+Edit
+1
+2
+3
+4
+#2. from – Converts array, promise, or iterable into an Observable
+typescript
+Copy
+Edit
+import { from } from 'rxjs';
+
+const observable$ = from([10, 20, 30]);
+observable$.subscribe(value => console.log(value));
+Output:
+
+Copy
+Edit
+10
+20
+30
+#3. interval – Emits an infinite sequence of ascending numbers in a given time interval
+typescript
+Copy
+Edit
+import { interval } from 'rxjs';
+
+const observable$ = interval(1000); // emits every 1 second
+observable$.subscribe(value => console.log(value));
+Output:
+
+python-repl
+Copy
+Edit
+0
+1
+2
+3
+...
+#4. timer – Emits after a delay, and optionally repeatedly
+typescript
+Copy
+Edit
+import { timer } from 'rxjs';
+
+const observable$ = timer(2000); // emits once after 2 seconds
+observable$.subscribe(value => console.log(value));
+Output (after 2 seconds):
+
+Copy
+Edit
+0
+#5. range – Emits a sequence of numbers in a range
+typescript
+Copy
+Edit
+import { range } from 'rxjs';
+
+const observable$ = range(5, 3); // starts at 5, emits 3 numbers
+observable$.subscribe(value => console.log(value));
+Output:
+
+Copy
+Edit
+5
+6
+7
+6. fromEvent – Converts DOM events into Observables
+typescript
+Copy
+Edit
+import { fromEvent } from 'rxjs';
+
+const clicks$ = fromEvent(document, 'click');
+clicks$.subscribe(event => console.log('Clicked!', event));
