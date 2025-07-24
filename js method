@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        all object mehods with example in javscript
+
+
+ChatGPT said:
+Here’s a complete list of JavaScript Object methods along with examples for each.
+
+🔹 JavaScript Object Methods with Examples
+1. Object.assign()
+Copies properties from source to target.
+
+javascript
+const target = { a: 1 };
+const source = { b: 2 };
+const result = Object.assign(target, source);
+console.log(result); // { a: 1, b: 2 }
+2. Object.create()
+Creates a new object with the specified prototype.
+
+javascript
+const person = { isHuman: false };
+const me = Object.create(person);
+me.name = "Subhash";
+console.log(me); // { name: "Subhash" }
+3. Object.defineProperty()
+Adds or modifies a property.
+
+javascript
+const obj = {};
+Object.defineProperty(obj, "name", {
+  value: "Subhash",
+  writable: true
+});
+console.log(obj.name); // Subhash
+4. Object.defineProperties()
+Adds or modifies multiple properties.
+
+javascript
+const obj = {};
+Object.defineProperties(obj, {
+  name: { value: "Subhash" },
+  age: { value: 25 }
+});
+console.log(obj); // { name: "Subhash", age: 25 }
+5. Object.entries()
+Returns an array of [key, value] pairs.
+
+javascript
+const obj = { a: 1, b: 2 };
+console.log(Object.entries(obj)); // [ [ 'a', 1 ], [ 'b', 2 ] ]
+6. Object.freeze()
+Prevents changes to an object.
+
+javascript
+const obj = { name: "Subhash" };
+Object.freeze(obj);
+obj.name = "Warkad";
+console.log(obj.name); // Subhash
+7. Object.fromEntries()
+Converts a list of key-value pairs into an object.
+
+javascript
+const entries = [["a", 1], ["b", 2]];
+console.log(Object.fromEntries(entries)); // { a: 1, b: 2 }
+8. Object.getOwnPropertyDescriptor()
+Gets info about a property.
+
+javascript
+const obj = { name: "Subhash" };
+console.log(Object.getOwnPropertyDescriptor(obj, "name"));
+9. Object.getOwnPropertyDescriptors()
+Gets all descriptors.
+
+javascript
+const obj = { name: "Subhash", age: 25 };
+console.log(Object.getOwnPropertyDescriptors(obj));
+10. Object.getOwnPropertyNames()
+Returns all property names.
+
+javascript
+const obj = { a: 1, b: 2 };
+console.log(Object.getOwnPropertyNames(obj)); // [ 'a', 'b' ]
+11. Object.getOwnPropertySymbols()
+Gets symbol properties.
+
+javascript
+const sym = Symbol("id");
+const obj = { [sym]: 123 };
+console.log(Object.getOwnPropertySymbols(obj)); // [Symbol(id)]
+12. Object.getPrototypeOf()
+Returns prototype of an object.
+
+javascript
+const obj = {};
+console.log(Object.getPrototypeOf(obj)); // [Object: null prototype]
+13. Object.hasOwn()
+Checks if the object has the property (safe alternative to hasOwnProperty).
+
+javascript
+const obj = { a: 1 };
+console.log(Object.hasOwn(obj, "a")); // true
+14. Object.is()
+Compares values (like === but better for NaN and -0/+0).
+
+javascript
+console.log(Object.is(NaN, NaN)); // true
+console.log(Object.is(0, -0));   // false
+15. Object.isExtensible()
+Checks if properties can be added.
+
+javascript
+const obj = {};
+console.log(Object.isExtensible(obj)); // true
+16. Object.isFrozen()
+Checks if the object is frozen.
+
+javascript
+const obj = Object.freeze({ name: "Subhash" });
+console.log(Object.isFrozen(obj)); // true
+17. Object.isSealed()
+Checks if the object is sealed.
+
+javascript
+const obj = Object.seal({ name: "Subhash" });
+console.log(Object.isSealed(obj)); // true
+18. Object.keys()
+Returns an array of property names.
+
+javascript
+const obj = { a: 1, b: 2 };
+console.log(Object.keys(obj)); // [ 'a', 'b' ]
+19. Object.preventExtensions()
+Prevents new properties.
+
+javascript
+const obj = { name: "Subhash" };
+Object.preventExtensions(obj);
+obj.age = 30;
+console.log(obj.age); // undefined
+20. Object.seal()
+Prevents adding/removing properties.
+
+javascript
+const obj = { name: "Subhash" };
+Object.seal(obj);
+delete obj.name;
+console.log(obj.name); // Subhash
+21. Object.setPrototypeOf()
+Sets prototype of an object.
+
+javascript
+const proto = { greet: () => "Hello" };
+const obj = {};
+Object.setPrototypeOf(obj, proto);
+console.log(obj.greet()); // Hello
+22. Object.values()
+Returns an array of property values.
+
+javascript
+const obj = { a: 1, b: 2 };
+console.log(Object.values(obj)); // [ 1, 2 ]
+Would you like a PDF version of this with all examples properly formatted?
+
+
+
+
+
+
+
+
+You said:
+yes
+
+
+ChatGPT said:
+Here is your PDF containing all JavaScript Object methods with examples:
+
+📄 Download JavaScript_Object_Methods_with_Examples.pdf 
+
+
+
+
+
+
+
+
+You said:
+all Number mehods with example in javscript
+
+
+ChatGPT said:
+Here’s a complete list of JavaScript Number methods with examples:
+
+🔢 JavaScript Number Methods with Examples
+These methods are available on the Number object in JavaScript.
+
+1. Number.isFinite()
+Checks if a value is a finite number.
+
+javascript
+console.log(Number.isFinite(100));       // true
+console.log(Number.isFinite(Infinity));  // false
+2. Number.isInteger()
+Checks if a value is an integer.
+
+javascript
+console.log(Number.isInteger(10));   // true
+console.log(Number.isInteger(10.5)); // false
+3. Number.isNaN()
+Checks if the value is NaN.
+
+javascript
+console.log(Number.isNaN(NaN));     // true
+console.log(Number.isNaN("hello")); // false
+4. Number.isSafeInteger()
+Checks if the value is a safe integer (within ±(2^53 - 1)).
+
+javascript
+console.log(Number.isSafeInteger(100)); // true
+console.log(Number.isSafeInteger(1e100)); // false
+5. Number.parseFloat()
+Parses a string and returns a floating point number.
+
+javascript
+console.log(Number.parseFloat("10.55")); // 10.55
+console.log(Number.parseFloat("abc"));   // NaN
+6. Number.parseInt()
+Parses a string and returns an integer.
+
+javascript
+console.log(Number.parseInt("50px")); // 50
+console.log(Number.parseInt("abc"));  // NaN
+✅ Number Instance Methods
+These methods are available on number values or Number objects.
+
+7. toExponential()
+Returns a string in exponential notation.
+
+javascript
+let num = 12345;
+console.log(num.toExponential());      // "1.2345e+4"
+console.log(num.toExponential(2));     // "1.23e+4"
+8. toFixed()
+Formats number with fixed decimal points.
+
+javascript
+let num = 5.6789;
+console.log(num.toFixed(2)); // "5.68"
+9. toLocaleString()
+Formats number using local conventions.
+
+javascript
+let num = 1234567.89;
+console.log(num.toLocaleString()); // "1,234,567.89" (based on locale)
+10. toPrecision()
+Formats to specified precision.
+
+javascript
+let num = 123.456;
+console.log(num.toPrecision(4)); // "123.5"
+console.log(num.toPrecision(2)); // "1.2e+2"
+11. toString()
+Converts number to a string (optionally in a different base).
+
+javascript
+let num = 255;
+console.log(num.toString());    // "255"
+console.log(num.toString(16));  // "ff" (hex)
+12. valueOf()
+Returns the primitive value of a Number object.
+
+javascript
+let numObj = new Number(10);
+console.log(numObj.valueOf()); // 10
+Would you like this list in PDF format as well?
+
+
+
+
+
+
+
+
+You said:
+yes
+
+
+ChatGPT said:
+Here is your PDF containing all JavaScript Number methods with examples:
+
+📄 Download JavaScript_Number_Methods_with_Examples.pdf 
+
+
+
+
+
+
+
+
+You said:
+all Math  mehods with example in javscript
+
+
+ChatGPT said:
+Here’s a complete list of JavaScript Math methods with examples:
+
+🧮 JavaScript Math Methods with Examples
+The Math object contains properties and methods for mathematical constants and functions. It is not a constructor, so you can't create Math instances.
+
+1. Math.abs(x)
+Returns the absolute value.
+
+javascript
+console.log(Math.abs(-5)); // 5
+2. Math.ceil(x)
+Rounds a number up to the next largest integer.
+
+javascript
+console.log(Math.ceil(4.2)); // 5
+3. Math.floor(x)
+Rounds a number down to the nearest integer.
+
+javascript
+console.log(Math.floor(4.7)); // 4
+4. Math.round(x)
+Rounds a number to the nearest integer.
+
+javascript
+console.log(Math.round(4.4)); // 4
+console.log(Math.round(4.5)); // 5
+5. Math.trunc(x)
+Removes the fractional part.
+
+javascript
+console.log(Math.trunc(4.9)); // 4
+6. Math.max(x, y, ...)
+Returns the largest number.
+
+javascript
+console.log(Math.max(10, 20, 30)); // 30
+7. Math.min(x, y, ...)
+Returns the smallest number.
+
+javascript
+console.log(Math.min(10, 20, 30)); // 10
+8. Math.pow(base, exponent)
+Returns base raised to exponent.
+
+javascript
+console.log(Math.pow(2, 3)); // 8
+9. Math.sqrt(x)
+Returns the square root.
+
+javascript
+console.log(Math.sqrt(16)); // 4
+10. Math.cbrt(x)
+Returns the cube root.
+
+javascript
+console.log(Math.cbrt(27)); // 3
+11. Math.random()
+Returns a random number between 0 and 1.
+
+javascript
+console.log(Math.random()); // e.g., 0.7322
+12. Math.sign(x)
+Returns the sign of a number: -1, 0, 1.
+
+javascript
+console.log(Math.sign(-5)); // -1
+console.log(Math.sign(0));  // 0
+console.log(Math.sign(5));  // 1
+13. Math.log(x)
+Natural logarithm (base e).
+
+javascript
+console.log(Math.log(10)); // ~2.302
+14. Math.log10(x)
+Base-10 logarithm.
+
+javascript
+console.log(Math.log10(100)); // 2
+15. Math.log2(x)
+Base-2 logarithm.
+
+javascript
+console.log(Math.log2(8)); // 3
+16. Math.exp(x)
+Returns e^x.
+
+javascript
+console.log(Math.exp(1)); // 2.718...
+17. Math.sin(x)
+Sine of x (in radians).
+
+javascript
+console.log(Math.sin(Math.PI / 2)); // 1
+18. Math.cos(x)
+Cosine of x (in radians).
+
+javascript
+console.log(Math.cos(0)); // 1
+19. Math.tan(x)
+Tangent of x (in radians).
+
+javascript
+console.log(Math.tan(Math.PI / 4)); // ~1
+20. Math.asin(x)
+Arcsine, returns angle in radians.
+
+javascript
+console.log(Math.asin(1)); // 1.57 (PI/2)
+21. Math.acos(x)
+Arccosine.
+
+javascript
+console.log(Math.acos(1)); // 0
+22. Math.atan(x)
+Arctangent.
+
+javascript
+console.log(Math.atan(1)); // ~0.785 (PI/4)
+23. Math.atan2(y, x)
+Returns the angle from the X-axis to a point (x, y).
+
+javascript
+console.log(Math.atan2(1, 1)); // ~0.785 (PI/4)
+24. Math.hypot(x, y, ...)
+Returns the square root of the sum of squares.
+
+javascript
+console.log(Math.hypot(3, 4)); // 5
+Would you like this in PDF format also?
+
+
+
+
+
+
+
+
+You said:
+yes
+
+
+ChatGPT said:
+Here is your PDF containing all JavaScript Math methods with examples:
+
+📄 Download JavaScript_Math_Methods_with_Examples.pdf 
+
+
+
+
+
+
+
+
+You said:
+all Global functon mehods with example in javscript
+
+
+ChatGPT said:
+Here is a list of all Global Functions in JavaScript (also known as global objects or top-level functions) with examples:
+
+🌐 JavaScript Global Functions with Examples
+These functions are available globally, i.e., you can call them without any object.
+
+1. eval()
+Evaluates JavaScript code represented as a string.
+
+javascript
+console.log(eval("2 + 2")); // 4
+2. isFinite()
+Determines whether a value is a finite number.
+
+javascript
+console.log(isFinite(100));     // true
+console.log(isFinite(Infinity)); // false
+3. isNaN()
+Determines whether a value is NaN.
+
+javascript
+console.log(isNaN(NaN));       // true
+console.log(isNaN("hello"));   // true
+console.log(Number.isNaN("hello")); // false (stricter check)
+4. parseFloat()
+Parses a string and returns a floating-point number.
+
+javascript
+console.log(parseFloat("10.5"));  // 10.5
+console.log(parseFloat("5px"));  // 5
+5. parseInt()
+Parses a string and returns an integer.
+
+javascript
+console.log(parseInt("50px"));  // 50
+console.log(parseInt("10", 2)); // 2 (binary to decimal)
+6. decodeURI()
+Decodes a Uniform Resource Identifier (URI) created by encodeURI.
+
+javascript
+console.log(decodeURI("https://example.com/a%20b")); // "https://example.com/a b"
+7. decodeURIComponent()
+Decodes a URI component.
+
+javascript
+console.log(decodeURIComponent("a%20b")); // "a b"
+8. encodeURI()
+Encodes a URI by escaping certain characters.
+
+javascript
+console.log(encodeURI("https://example.com/a b")); // "https://example.com/a%20b"
+9. encodeURIComponent()
+Encodes a URI component.
+
+javascript
+console.log(encodeURIComponent("a b")); // "a%20b"
+10. escape() ⚠️ Deprecated
+Encodes a string.
+
+javascript
+console.log(escape("abc 123")); // "abc%20123"
+11. unescape() ⚠️ Deprecated
+Decodes an encoded string.
+
+javascript
+console.log(unescape("abc%20123")); // "abc 123"
+12. globalThis
+Provides access to the global object (window, global, etc.).
+
+javascript
+console.log(globalThis.setTimeout === setTimeout); // true
+Would you like this in PDF format too?
+
+
+
+
+
+
+
+
+You said:
+yes
+
+
+ChatGPT said:
+It seems like I can’t do more advanced data analysis right now. Please try again later.
+
+If you'd like, I can give you the full content in text form so you can create the PDF manually or copy it elsewhere. Let me know how you’d like to proceed. 
+
+
+
+
+
+
+
+
+You said:
+Would you like this in PDF format too? Yes
+
+
+ChatGPT said:
+It seems like I can’t do more advanced data analysis right now. Please try again later.
+
+However, I can provide you with the full text content of all JavaScript Global Functions with examples right here. You can copy this into a document or online editor like jsfiddle.net, CodePen, or generate a PDF manually.
+
+Would you like me to paste the full formatted content here so you can download it yourself or save it another way? 
+
+
+
+
+
+
+
+
+You said:
+all Date mehods with example in javscript
+
+
+ChatGPT said:
+Here is a complete list of JavaScript Date methods with examples:
+
+📅 JavaScript Date Methods with Examples
+In JavaScript, the Date object is used to work with dates and times. You can create a new date using:
+
+javascript
+let now = new Date();
+🛠 Constructor
+javascript
+let date1 = new Date();                      // current date & time
+let date2 = new Date("2025-07-24");          // date from string
+let date3 = new Date(2025, 6, 24);           // year, month (0-based), day
+let date4 = new Date(2025, 6, 24, 10, 30);   // year, month, day, hour, minute
+🔍 Get Methods
+Method	Example & Output
+getFullYear()	date.getFullYear() → 2025
+getMonth()	date.getMonth() → 6 (July)
+getDate()	date.getDate() → 24
+getDay()	date.getDay() → 4 (0=Sunday...6=Saturday)
+getHours()	date.getHours() → 14
+getMinutes()	date.getMinutes() → 45
+getSeconds()	date.getSeconds() → 33
+getMilliseconds()	date.getMilliseconds() → 12
+getTime()	date.getTime() → milliseconds since Jan 1, 1970
+getTimezoneOffset()	date.getTimezoneOffset() → -330 (for IST)
+getUTCFullYear()	date.getUTCFullYear()
+getUTCMonth()	date.getUTCMonth()
+getUTCDate()	date.getUTCDate()
+
+✍️ Set Methods
+Method	Example
+setFullYear(y)	date.setFullYear(2026)
+setMonth(m)	date.setMonth(0) // January
+setDate(d)	date.setDate(1)
+setHours(h)	date.setHours(10)
+setMinutes(m)	date.setMinutes(30)
+setSeconds(s)	date.setSeconds(20)
+setMilliseconds(ms)	date.setMilliseconds(100)
+setTime(ms)	date.setTime(1678930212332)
+
+🌐 Conversion Methods
+Method	Example
+toDateString()	date.toDateString() → "Thu Jul 24 2025"
+toTimeString()	date.toTimeString() → "14:45:30 GMT+0530"
+toISOString()	date.toISOString() → "2025-07-24T09:15:30.000Z"
+toUTCString()	date.toUTCString()
+toLocaleString()	date.toLocaleString()
+toLocaleDateString()	date.toLocaleDateString()
+toLocaleTimeString()	date.toLocaleTimeString()
+
+🧮 Other Methods
+Method	Example
+valueOf()	date.valueOf() → milliseconds
+Date.now()	Date.now() → current timestamp
+Date.parse(str)	Date.parse("2025-07-24") → milliseconds
+Date.UTC(...)	Date.UTC(2025, 6, 24)
+
+Would you like a PDF of this content too?
+
+
+
+
+
+
+
+
+You said:
+yes
+
+
+ChatGPT said:
+It seems like I can’t do more advanced data analysis right now. Please try again later.
+
+In the meantime, I can give you the full text version of all JavaScript Date methods with examples. You can copy it into a document or code editor and export it as a PDF manually.
+
+Would you like me to paste the full formatted content here for that? 
+
+
+
+
+
+
+
+
+You said:
+all JSON mehods with example in javscript
+
+
+ChatGPT said:
+Here is a complete list of JavaScript JSON methods with clear examples:
+
+📦 JavaScript JSON Methods with Examples
+The JSON object has two main methods:
+
+1. JSON.stringify()
+Converts a JavaScript object or value to a JSON string.
+
+✅ Example 1: Convert Object to JSON String
+javascript
+const user = { name: "Alice", age: 25 };
+const jsonString = JSON.stringify(user);
+console.log(jsonString); // {"name":"Alice","age":25}
+✅ Example 2: Add spacing for readability
+javascript
+const prettyJSON = JSON.stringify(user, null, 2);
+console.log(prettyJSON);
+/*
+{
+  "name": "Alice",
+  "age": 25
+}
+*/
+✅ Example 3: Filter specific keys
+javascript
+const user = { name: "Bob", age: 30, city: "Delhi" };
+const filteredJSON = JSON.stringify(user, ["name", "city"]);
+console.log(filteredJSON); // {"name":"Bob","city":"Delhi"}
+2. JSON.parse()
+Converts a JSON string back into a JavaScript object.
+
+✅ Example 1: Parse JSON String to Object
+javascript
+const jsonString = '{"name":"Alice","age":25}';
+const user = JSON.parse(jsonString);
+console.log(user.name); // Alice
+✅ Example 2: Using a reviver function
+javascript
+const data = '{"name":"Bob","age":30}';
+const obj = JSON.parse(data, (key, value) => {
+  if (key === "age") return value + 1;
+  return value;
+});
+console.log(obj); // { name: "Bob", age: 31 }
+❗ Notes:
+JSON.stringify() only includes enumerable properties.
+
+JSON.parse() throws an error if the string is not properly formatted.
+
+JSON does not support functions, undefined, NaN, or Infinity.
+
+
+
+
+
+
+🌐 JavaScript Web APIs with Examples
+1. fetch() – Network Request API
+javascript
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then(response => response.json())
+  .then(data => console.log(data));
+2. localStorage / sessionStorage – Storage API
+localStorage
+javascript
+localStorage.setItem("username", "subhash");
+console.log(localStorage.getItem("username")); // "subhash"
+localStorage.removeItem("username");
+sessionStorage
+javascript
+sessionStorage.setItem("token", "abc123");
+console.log(sessionStorage.getItem("token")); // "abc123"
+3. navigator – Browser Info API
+javascript
+console.log(navigator.userAgent);       // Browser info
+console.log(navigator.language);        // e.g., "en-US"
+console.log(navigator.onLine);          // true/false
+4. geolocation – Location API
+javascript
+navigator.geolocation.getCurrentPosition(
+  position => {
+    console.log(position.coords.latitude, position.coords.longitude);
+  },
+  error => {
+    console.error(error);
+  }
+);
+5. setTimeout() / setInterval() – Timer APIs
+javascript
+setTimeout(() => console.log("Hello after 1 sec"), 1000);
+let id = setInterval(() => console.log("Repeat every 2 sec"), 2000);
+// clearInterval(id);
+6. alert(), prompt(), confirm() – Dialog APIs
+javascript
+alert("Welcome!");
+let name = prompt("Enter your name:");
+let isConfirmed = confirm("Are you sure?");
+7. console – Debugging API
+javascript
+console.log("Normal log");
+console.warn("Warning");
+console.error("Error");
+8. document / window – DOM APIs
+javascript
+console.log(document.title);              // Get page title
+document.body.style.background = "lightblue"; // Change background
+window.scrollTo(0, 100);                  // Scroll page
+9. FormData – For Sending Form Data
+javascript
+const form = document.querySelector("form");
+const formData = new FormData(form);
+fetch("/submit", {
+  method: "POST",
+  body: formData
+});
+10. history – Browser Navigation
+javascript
+history.back();      // Go back
+history.forward();   // Go forward
+11. location – URL Info
+javascript
+console.log(location.href);       // Full URL
+location.reload();                // Reload page
+12. Performance API – Measure Speed
+javascript
+console.log(performance.now()); // High precision timestamp
+13. Clipboard API – Copy/Paste
+javascript
+navigator.clipboard.writeText("Copied text!");
+14. SpeechSynthesis API – Text to Speech
+javascript
+const msg = new SpeechSynthesisUtterance("Hello World");
+speechSynthesis.speak(msg);
+15. Battery API (Experimental)
+javascript
+navigator.getBattery().then(battery => {
+  console.log(battery.level * 100 + "%");
+});
+Would you like this Web API content in PDF format as well?
+
+
+🖥️ JavaScript console Methods with Examples
+1. console.log()
+Used to print general output to the console.
+
+javascript
+console.log("This is a log message"); 
+2. console.error()
+Displays an error message.
+
+javascript
+console.error("This is an error message");
+3. console.warn()
+Prints a warning message.
+
+javascript
+console.warn("This is a warning");
+4. console.info()
+Similar to console.log() but used for informational messages.
+
+javascript
+console.info("This is some info");
+5. console.debug()
+For debugging messages (may not show unless developer tools allow it).
+
+javascript
+console.debug("Debugging info");
+6. console.table()
+Displays tabular data in a table format.
+
+javascript
+const users = [
+  { name: "Alice", age: 25 },
+  { name: "Bob", age: 30 }
+];
+console.table(users);
+7. console.dir()
+Displays an interactive list of the properties of a specified object.
+
+javascript
+const obj = { a: 1, b: 2 };
+console.dir(obj);
+8. console.group() and console.groupEnd()
+Creates an indented group of log messages.
+
+javascript
+console.group("User Info");
+console.log("Name: Alice");
+console.log("Age: 25");
+console.groupEnd();
+9. console.groupCollapsed()
+Creates a collapsed group by default.
+
+javascript
+console.groupCollapsed("Details");
+console.log("Hidden unless expanded");
+console.groupEnd();
+10. console.count()
+Logs how many times it has been called with a particular label.
+
+javascript
+function greet() {
+  console.count("greet called");
+}
+greet();
+greet();
+11. console.clear()
+Clears the console.
+
+javascript
+console.clear();
+12. console.time() and console.timeEnd()
+Measures how long an operation takes.
+
+javascript
+console.time("LoopTime");
+for (let i = 0; i < 1000000; i++) {}
+console.timeEnd("LoopTime");
+13. console.assert()
+Logs a message if an assertion fails.
+
+javascript
+console.assert(1 === 2, "Assertion failed: 1 is not equal to 2");
+14. console.trace()
+Shows the stack trace of function calls leading to this point.
+
+javascript
+function a() { b(); }
+function b() { c(); }
+function c() { console.trace("Trace here"); }
+a();
+Would you like this console methods guide in PDF format as well?
+
+
+
+
+
+
+
+
+You said:
+all Miscellaneous mehods with example in javscript
+
+
+ChatGPT said:
+Here is a list of miscellaneous (other useful/built-in) methods and features in JavaScript that don’t belong to a single core object like Array, Math, or JSON, but are commonly used in day-to-day coding:
+
+🧩 Miscellaneous JavaScript Methods with Examples
+1. eval()
+Evaluates JavaScript code represented as a string.
+
+javascript
+let x = 10;
+eval("x = x + 5");
+console.log(x); // 15
+2. isNaN()
+Checks if a value is NaN (Not-a-Number).
+
+javascript
+console.log(isNaN("hello")); // true
+console.log(isNaN(123));     // false
+3. isFinite()
+Checks if a number is finite.
+
+javascript
+console.log(isFinite(100));       // true
+console.log(isFinite(Infinity));  // false
+4. parseInt()
+Parses a string and returns an integer.
+
+javascript
+console.log(parseInt("42"));     // 42
+console.log(parseInt("42px"));   // 42
+5. parseFloat()
+Parses a string and returns a floating-point number.
+
+javascript
+console.log(parseFloat("3.14")); // 3.14
+6. decodeURI()
+Decodes a full URI.
+
+javascript
+let uri = "https://example.com/?name=John%20Doe";
+console.log(decodeURI(uri)); 
+7. decodeURIComponent()
+Decodes URI components.
+
+javascript
+console.log(decodeURIComponent("John%20Doe")); // John Doe
+8. encodeURI()
+Encodes a full URI.
+
+javascript
+let url = "https://example.com/?name=John Doe";
+console.log(encodeURI(url));
+9. encodeURIComponent()
+Encodes a URI component.
+
+javascript
+console.log(encodeURIComponent("John Doe")); // John%20Doe
+10. escape() (Deprecated)
+Encodes a string (not recommended anymore).
+
+javascript
+console.log(escape("abc@#")); // "abc%40%23"
+11. unescape() (Deprecated)
+Decodes a string encoded with escape().
+
+javascript
+console.log(unescape("abc%40%23")); // "abc@#"
+12. typeof (Operator)
+Returns the type of a variable.
+
+javascript
+console.log(typeof "Hello"); // string
+console.log(typeof 123);     // number
+13. instanceof (Operator)
+Tests if an object is an instance of a specific constructor.
+
+javascript
+let arr = [];
+console.log(arr instanceof Array); // true
+14. Object.prototype.toString.call() (Type checking)
+Advanced way to get accurate type.
+
+javascript
+console.log(Object.prototype.toString.call([])); // [object Array]
+console.log(Object.prototype.toString.call(null)); // [object Null]
+
+    </script>
+</body>
+</html>
